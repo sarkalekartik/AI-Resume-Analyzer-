@@ -1,122 +1,327 @@
-# **AI Resume Analyser With NLP on Streamlit**
+# 🤖 AI Resume Analyzer with NLP
 
-![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
+<div align="center">
 
-• Please do ⭐ the repository, if it helped you in anyway.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?style=for-the-badge)
+![NLP](https://img.shields.io/badge/NLP-AI-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## Preview
-![Click HERE To View](https://github.com/Akash1070/AI-Resume-Analyser-With-NLP/blob/main/Screenshot.png)
+### 🚀 AI-Powered Resume Analysis & Career Recommendation System
 
-## Authors
+Analyze resumes using **Natural Language Processing (NLP)** and **Machine Learning** to extract skills, recommend courses, predict career domains, and improve ATS compatibility.
 
-- [@Akash Kumar Jha](https://github.com/Akash1070)
+⭐ If you found this project helpful, please give it a **Star**.
 
+</div>
 
-## Deployment
- 
-    1. Model Building and Tuning
-    2. Building Flask API
-   
-## Installation
+---
 
-To install the libraries used in this project. Follow the 
-below steps:
+# 📖 Overview
+
+AI Resume Analyzer is an intelligent web application developed using **Python**, **Streamlit**, **NLP**, and **Machine Learning**.
+
+The system analyzes uploaded resumes (PDF), extracts skills, predicts suitable job domains, provides resume improvement suggestions, recommends learning resources, and helps candidates prepare for interviews.
+
+This project is ideal for students, job seekers, HR professionals, and recruiters.
+
+---
+
+# ✨ Features
+
+- 📄 Resume Upload (PDF)
+- 🤖 AI Resume Analysis
+- 🧠 NLP-based Skill Extraction
+- 📊 Resume Score Calculation
+- 💼 Job Domain Prediction
+- 🎯 ATS Resume Analysis
+- 📚 Course Recommendations
+- 🎥 Interview Preparation Videos
+- 📈 Interactive Dashboard
+- 📊 Data Visualization
+- 🔐 Admin Panel
+- 📑 Resume Parsing
+- 💡 Resume Improvement Suggestions
+- ⚡ Fast Processing
+- 🌐 User-Friendly Interface
+
+---
+
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|-----------|-------------|
+| Language | Python |
+| Framework | Streamlit |
+| AI | Machine Learning |
+| NLP | NLTK, spaCy |
+| Resume Parsing | PyResParser |
+| PDF Processing | PDFMiner |
+| Database | MySQL |
+| Visualization | Plotly |
+| Libraries | Pandas, Pillow |
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Resume-Analyzer/
+│
+├── App.py
+├── Courses.py
+├── requirements.txt
+├── README.md
+│
+├── Uploaded_Resumes/
+├── Logo/
+├── assets/
+├── models/
+├── Screenshots/
+│
+└── requirements.txt
+```
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
+git clone https://github.com/sarkalekartik/AI-Resume-Analyzer.git
 
-#SET UP:
+cd AI-Resume-Analyzer
+```
 
-# 1. INSTALL BELOW LIBRARIES
+---
 
-        #pip install -r requirements.txt
+## Install Dependencies
 
-        # pip install nltk
+```bash
+pip install -r requirements.txt
+```
 
-        # pip install spacy==2.3.5
+---
 
-        # pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+## Install spaCy Model
 
-        # pip install pyresparser
+```bash
+python -m spacy download en_core_web_sm
+```
 
-# 2. CREAT A FOLDER AND NAME IT (e.g. resume)
+---
 
-        #2.1 create two more folders inside this folder (Logo and Uploaded_Resumes)
-        #2.2 create two python files (App.py and Courses.py)
+## Download NLTK Data
 
-# 3. START YOUR SQL DATABASE
-
-
-# 4. CONTINUE WITH THE FOLLOWING CODE...
-
-import streamlit as st
-import pandas as pd
-import base64,random
-import time,datetime
-#libraries to parse the resume pdf files
-from pyresparser import ResumeParser
-from pdfminer3.layout import LAParams, LTTextBox
-from pdfminer3.pdfpage import PDFPage
-from pdfminer3.pdfinterp import PDFResourceManager
-from pdfminer3.pdfinterp import PDFPageInterpreter
-from pdfminer3.converter import TextConverter
-import io,random
-from streamlit_tags import st_tags
-from PIL import Image
-import pymysql
-from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
-import pafy #for uploading youtube videos
-import plotly.express as px #to create visualisations at the admin session
+```python
 import nltk
 nltk.download('stopwords')
-
 ```
-    
-## Running Flask Api
 
-To run tests, run the following command
+---
+
+## Run Application
 
 ```bash
-  python app.py
+streamlit run App.py
 ```
 
-## 🚀 About Me
+---
 
-Data Scientist Enthusiast | Petroleum Engineer Graduate | Solving Problems Using Data 
+# 📋 Requirements
 
+- Python 3.10+
+- Streamlit
+- Pandas
+- spaCy
+- NLTK
+- PyResParser
+- PDFMiner
+- Plotly
+- Pillow
+- MySQL
 
-# Hi, I'm Akash! 👋
+---
 
+# 📊 Application Workflow
 
-## 🔗 Links
-[![github](https://img.shields.io/badge/github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/Akash1070)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akashkumar107/)
+```text
+Upload Resume (PDF)
+        │
+        ▼
+Resume Parsing
+        │
+        ▼
+Skill Extraction
+        │
+        ▼
+Resume Analysis
+        │
+        ▼
+ATS Score
+        │
+        ▼
+Domain Prediction
+        │
+        ▼
+Course Recommendation
+        │
+        ▼
+Interview Preparation
+```
 
-## Tech Stack
+---
 
+# 📸 Screenshots
 
+```
+Screenshots/
+│
+├── Home.png
+├── Upload.png
+├── Dashboard.png
+└── ResumeAnalysis.png
+```
 
+Add your screenshots inside the **Screenshots** folder.
 
+---
 
-![Logo](https://businesstoys.in/assets/programs/full-stack-data-science-professional-program/tools.png)
-## Other Me
-👩‍💻 I’m interested in Petroleum Engineering
+# 🎯 Key Modules
 
-🧠 I’m currently learning Data Scientist | Data Analytics | Business Analytics
+### 📄 Resume Parser
 
-👯‍♀️ I’m looking to collaborate on Ideas & Data
+- Extract text from PDF
+- Read candidate information
+- Parse education
+- Parse experience
 
+### 🤖 NLP Engine
 
+- Skill extraction
+- Keyword detection
+- Stopword removal
+- Tokenization
 
+### 📊 Resume Analyzer
 
-## 🛠 Skills
-1. Data Scientist
-2. Data Analyst
-3. Business Analyst
-4. Machine Learning 
+- Resume Score
+- Missing Skills
+- ATS Compatibility
+- Suggestions
 
+### 📚 Recommendation System
 
-## Future Plans 
+- Learning Courses
+- YouTube Videos
+- Career Guidance
 
-⚡️ Looking forward to help drive innovations into your company as a Data Scientist
+### 📈 Dashboard
 
-⚡️ Looking forward to offer more than I take and leave the place better than i found
+- Resume Analytics
+- Charts
+- User Statistics
+
+---
+
+# 💼 Use Cases
+
+- Students
+- Freshers
+- Job Seekers
+- Recruiters
+- HR Teams
+- Career Counselors
+
+---
+
+# 📚 Concepts Used
+
+- Artificial Intelligence
+- Machine Learning
+- Natural Language Processing
+- Resume Parsing
+- Text Mining
+- PDF Processing
+- Data Visualization
+- Recommendation System
+
+---
+
+# 🔮 Future Enhancements
+
+- GPT Resume Suggestions
+- Resume Builder
+- Cover Letter Generator
+- LinkedIn Resume Import
+- AI Interview Assistant
+- Job Recommendation Engine
+- ATS Resume Checker
+- Multi-language Support
+- Cloud Deployment
+- Mobile App
+
+---
+
+# 🛠 Skills Demonstrated
+
+- Python Programming
+- Machine Learning
+- NLP
+- Streamlit
+- Data Analysis
+- MySQL
+- PDF Processing
+- Data Visualization
+
+---
+
+# 👨‍💻 Author
+
+## Kartik Sarkale
+
+💻 Full Stack Developer
+
+🤖 AI & Machine Learning Enthusiast
+
+🛡️ Cybersecurity Learner
+
+🌐 Networking Enthusiast
+
+📧 Email: **sarkalekartik42@gmail.com**
+
+GitHub: **https://github.com/sarkalekartik**
+
+---
+
+# ⭐ Support
+
+If you like this project,
+
+⭐ Star the repository
+
+🍴 Fork the repository
+
+🐛 Report Issues
+
+📢 Share with others
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+## 🚀 Build • Learn • Innovate
+
+**Made with ❤️ using Python, NLP, Machine Learning & Streamlit**
+
+⭐ **Don't forget to Star this Repository!** ⭐
+
+</div>
